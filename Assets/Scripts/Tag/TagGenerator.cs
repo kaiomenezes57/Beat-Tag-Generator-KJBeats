@@ -40,6 +40,8 @@ namespace VideoGenerator.Tag
             str = SetFinalVisual(str, foundedTags);
             Debug.Log(NameGenerator.GenerateTitle());
             CreateAndWriteFile(str);
+
+            Application.Quit();
         }
 
         private string SetFinalVisual(string str, List<string> baseList)
@@ -63,7 +65,7 @@ namespace VideoGenerator.Tag
 
             for (int i = 0; i < tags.Count; i++)
             {
-                str += $"{tags[i]} type beat,beat estilo {tags[i]},{tags[i]} instrumental,";
+                str += $"{tags[i]} type beat,beat estilo {tags[i]},";
             }
 
             return str;

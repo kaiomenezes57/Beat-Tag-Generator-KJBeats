@@ -13,6 +13,9 @@ namespace VideoGenerator.Tag
         public List<string> DrillTrappers => m_DrillTrappers;
         [SerializeField] private List<string> m_DrillTrappers = new();
 
+        public List<string> FunkMC => m_FunkMC;
+        [SerializeField] private List<string> m_FunkMC = new();
+
         private void Awake()
         {
             Instance = this;
@@ -26,6 +29,8 @@ namespace VideoGenerator.Tag
                     return m_SlowTrappers;
                 case BeatStyle.Drill:
                     return m_DrillTrappers;
+                case BeatStyle.Funk:
+                    return m_FunkMC;
             }
 
             return null;
@@ -34,7 +39,8 @@ namespace VideoGenerator.Tag
         public enum BeatStyle
         {
             Slow,
-            Drill
+            Drill,
+            Funk
         }
     }
 }
